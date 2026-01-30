@@ -23,9 +23,9 @@ from sklearn import metrics as sk_metrics
 import tensorflow.compat.v1 as tf
 
 import models
-
+import warnings
 # To suppress warnings in the sigmoid function
-np.warnings.filterwarnings('ignore')
+warnings.filterwarnings('ignore')
 TfInput = models.TfInput
 LossFunction = Callable[[tf.keras.Model, TfInput, TfInput], tf.Tensor]
 GraphOpsAndTensors = Dict[str, Union[tf.Tensor, tf.Operation, tf.keras.Model]]
